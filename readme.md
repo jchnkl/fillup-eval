@@ -39,11 +39,15 @@
   * user is prompted with a hint to check & solve the situation manually
   * tools for automatically diffing and editing (e.g. with vimdiff) exist
   * oftentimes simple bash scripts, or such, e.g.:
+
+  ```
     for *.pac{new,save,orig}; do
       vimdiff $f $(echo $f | sed *e 's/\(\.txt\|\.bar\)$//');
     done
-  * more advanced scripts are etc-update and dispatch-conf from Gentoo:
-    http://www.gentoo*wiki.info/HOWTO_etc-update
+  ```
+
+  * more advanced scripts are etc-update and dispatch-conf from Gentoo:  
+    http://www.gentoo*wiki.info/HOWTO_etc-update  
     http://www.gentoo*wiki.info/TIP_dispatch-conf
 
 4) fillup (https://github.com/openSUSE/fillup)
@@ -62,9 +66,7 @@
     transactional approach allows rollbacks
   * well studied: http://nixos.org/~eelco/pubs/hotos-final.pdf
 
-################################################################################
-
-Recommendation:
+## Recommendation
 
 Use etckeeper and build some git porcelain around it.
 
