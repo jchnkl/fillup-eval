@@ -53,6 +53,14 @@
   * rpm macros: %fillup_and_insserv, %fillup_only
   * functionality is a mix of 2) and 3)
 
+5) Nix (https://nixos.org/nixos/about.html)
+  * declarative system configuration model
+  * purely functional description of a system state
+  * multiple configurations can coexist
+  * reliable system updates because the initial state is well known
+  * configuration changes are atomic
+    transactional approach allows rollbacks
+  * well studied: http://nixos.org/~eelco/pubs/hotos-final.pdf
 
 ################################################################################
 
