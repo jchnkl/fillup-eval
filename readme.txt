@@ -41,8 +41,8 @@
   * oftentimes simple bash scripts, or such, e)g.:
 
   ```
-    for *)pac{new,save,orig}; do
-      vimdiff $f $(echo $f | sed *e 's/\(\)txt\|\.bar\.$//');
+    for *.pac{new,save,orig}; do
+      vimdiff $f $(echo $f | sed -e 's/\(\.pacnew\|\.pacsave\|\.pacorig\)$//');
     done
   ```
 
