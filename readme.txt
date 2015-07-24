@@ -92,18 +92,33 @@
     d) replace both file and checksum, so dpkg doesn't recognize the change
       - new config files will replace locally customized files
 
-## Recommendation
+Proposal
+========
 
-Use etckeeper and build some git porcelain around it.
+Plan a)
+  Reuse the Nix package management system
+  + Well thought out, scientifically studied solution
+  + Functional, declarative awesomeness
+  - Many people won't like it, because it breaks their habitual way of thinking
 
-+ Reuse existing tools, don't invent the wheel again
-+ git is well known, many people are familiar with it
-+ Full version history:
-  Log of all changes to the system configuration
-+ diffing and merging of (remote) branches:
-  Easily compare configuration of two or more systems
-+ Extending with shell scripts hooks is trivial
+Therefore, Plan b)
+  Use etckeeper and build some git porcelain around it.
+    (e.g. `etc edit /etc/motd` would launch `$EDITOR` and automatically commit
+    changes afterwards. Idea is taken from https://github.com/RichiH/vcsh)
 
-- All of etc needs to be under version control
-  Files changed by deamons or with security concerns need to be excluded
-- Users need to learn how to properly use the new toolchain
+  + Reuse existing tools, don't invent the wheel again
+  + git is well known, many people are familiar with it
+  + Full version history:
+    Log of all changes to the system configuration
+  + diffing and merging of (remote) branches:
+    Easily compare configuration of two or more systems
+  + Extending with shell scripts hooks is trivial
+
+  - All of etc needs to be under version control
+    Files changed by deamons or with security concerns need to be excluded
+  - Users need to learn how to properly use the new toolchain
+
+Therefore, Plan c)
+  Reuse etcupdate from FreeBSD
+  + Does almost the same as Debian, but looks less complex
+  + No license trouble, because BSD
