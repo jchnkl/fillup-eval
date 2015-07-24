@@ -68,7 +68,8 @@
 
 6. Debian (https://wiki.debian.org/ConfigPackages)
   * multiple ways of dealing with configuration files
-    a. put config files into package and install scripts
+
+    a) put config files into package and install scripts
       + single object
       + global config can be systematically removed and reversed
       + config can be tested with `dpkg -i`
@@ -76,16 +77,19 @@
       - basic package setup takes about half an hour
       - existing pkgs need to be signed and uploaded to local repository
       - it's necessary to check how other pkgs handle a particular file
-    b. dpkg interactive conflict resolution
+
+    b) dpkg interactive conflict resolution
       - runs automatically when a config file is replaced
         solutions:
-        => c.
-        => d.
-    c. divert config into a separate package
+        => c)
+        => d)
+
+    c) divert config into a separate package
       + handles multiple config states with symlinks
       - complex interaction if pkg removed, but config pkg remains
       - requires symlink handling in `postinst` and `prerm` script hooks
-    d. replace both file and checksum, so dpkg doesn't recognize the change
+
+    d) replace both file and checksum, so dpkg doesn't recognize the change
       - new config files will replace locally customized files
 
 ## Recommendation
