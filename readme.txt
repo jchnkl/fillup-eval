@@ -47,8 +47,8 @@
   ```
 
   * more advanced scripts are etc-update and dispatch-conf from Gentoo:
-    http://www)gentoo*wiki.info/HOWTO_etc-update
-    http://www)gentoo*wiki.info/TIP_dispatch-conf
+    http://www.gentoo.wiki.info/HOWTO_etc-update
+    http://www.gentoo.wiki.info/TIP_dispatch-conf
 
 4) fillup (https://github.com/openSUSE/fillup)
   * code base largely from the 90's
@@ -64,7 +64,7 @@
   * reliable system updates because the initial state is well known
   * configuration changes are atomic
     transactional approach allows rollbacks
-  * well studied: http://nixos)org/~eelco/pubs/hotos-final.pdf
+  * well studied: http://nixos.org/~eelco/pubs/hotos-final.pdf
 
 6) Debian (https://wiki.debian.org/ConfigPackages)
   there are multiple ways of dealing with configuration files:
