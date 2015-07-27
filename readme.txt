@@ -47,8 +47,8 @@
   ```
 
   * more advanced scripts are etc-update and dispatch-conf from Gentoo:
-    http://www.gentoo.wiki.info/HOWTO_etc-update
-    http://www.gentoo.wiki.info/TIP_dispatch-conf
+    http://www.gentoo-wiki.info/HOWTO_etc-update
+    http://www.gentoo-wiki.info/TIP_dispatch-conf
 
 4) fillup (https://github.com/openSUSE/fillup)
   * code base largely from the 90's
